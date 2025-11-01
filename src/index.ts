@@ -1,41 +1,71 @@
+import Angel from "./classes/angel"
 import God from "./classes/god"
 import JesusCrist from "./classes/JesusCrist"
+import John from "./classes/john"
+import TestimonyOfJesusCrist from "./classes/testimonyOfJesusCrist"
+import WhoHearWordOfGod from "./interfaces/whoHearWordOfGod"
+import WhoReadWordOfGod from "./interfaces/whoReadWordOfGod"
 
+/**
+ * Simple hack. God haven't been created. 
+ * However he is not implicitly in this application.
+ */
 const god: God = new God
+
+
+/**
+ * The Entities created before the fulfill of The Revelation
+ */
 const jesusCrist: JesusCrist = god.createJesus()
 const angel: Angel = god.createAngel()
 const john: John = god.createJohn()
+
+const people: WhoHearWordOfGod[] = []
+const nations: WhoHearWordOfGod[] = []
+const languages: WhoHearWordOfGod[] = []
+const kings: WhoHearWordOfGod[] = []
 
 /**
  * Summary and conclusion of the entire book of Revelation
  * Revelation 1:1-8
  */
+
+
 // REV 1:1
+
   // The Revelation of Jesus Christ, which God gave unto him,
-  god.giveRevelationTo(jesusCrist) // to shew unto his servants things which must shortly come to pass;
-  // and he sent and signified it by his angel unto his servant John:
-  jesusCrist.giveRevelationTo(angel)
-  angel.giveRevelationTo(john)
+    god.giveRevelationTo(jesusCrist) // to shew unto his servants things which must shortly come to pass;
+
+  // and he sent and signified it by his angel
+    jesusCrist.giveRevelationTo(angel)
+
+  // unto his servant John:
+    angel.giveRevelationTo(john)
+
 
 // REV 1:2
-  // who bare record of the word of God, 
+
+  // who bare record of the word of God,
   // and of the testimony of Jesus Christ, and of all things that he saw.
-  const testimony: Testimony = john.testify()
+  const testimony: TestimonyOfJesusCrist = john.testify()
+
 
 // REV 1:3
   // Blessed is he that readeth,
-  const whoReads: WhoReads = john
+  const whoReads: WhoReadWordOfGod = john
   whoReads.getBlessed()
-  // and they that hear the words of this prophecy, 
-  const whoHears: WhoHear[] = [...people, ...nations, ...languages, ...kings]
-  for (const whoHear of whohears) {
-    if (whoHear.keepProhpecy()) {
-      whoHear.getBlessed()
-    }
-  }
-  // and keep those things which are written therein: 
-    // for the time is at hand.
 
+  // and they that hear the words of this prophecy, 
+  const whoHear: WhoHearWordOfGod[] = [...people, ...nations, ...languages, ...kings]
+
+  // and keep those things which are written therein: 
+  for (const oneWhoHear of whoHear) {
+    if (oneWhoHear.keepProphecy()) {
+      oneWhoHear.getBlessed()
+    }
+  } // for the time is at hand.
+
+  
 // REV 1:4
   // John to the seven churches which are in Asia: 
   // Grace be unto you, and peace, from him which is, and which was, and which is to come; 

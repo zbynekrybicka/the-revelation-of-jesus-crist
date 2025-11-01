@@ -2,16 +2,17 @@ import WhoCanAcceptRevelation from "../interfaces/whoCanAcceptRevelation";
 import WhoCanGiveRevelation from "../interfaces/whoCanGiveRevelation";
 import Revelation from "./revelation";
 
-export default class JesusCrist implements WhoCanAcceptRevelation, WhoCanGiveRevelation {
-    
-    revelation?: Revelation
+export default class Angel implements WhoCanAcceptRevelation, WhoCanGiveRevelation
+{
+
+    revelation?: Revelation;
 
 
     /**
      * Rev 1:1
-     * The Revelation of Jesus Christ, which God gave unto him
+     * and he sent and signified it by his angel unto his servant John
      * 
-     * @param revelation Revelation
+     * @param revelation 
      */
     acceptRevelation(revelation: Revelation): void
     {

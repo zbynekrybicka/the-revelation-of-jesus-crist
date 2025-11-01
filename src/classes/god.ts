@@ -1,6 +1,8 @@
 import WhoCanAcceptRevelation from "../interfaces/whoCanAcceptRevelation";
 import WhoCanGiveRevelation from "../interfaces/whoCanGiveRevelation";
+import Angel from "./angel";
 import JesusCrist from "./JesusCrist";
+import John from "./john";
 import Revelation from "./revelation";
 
 /**
@@ -11,6 +13,13 @@ export default class God implements WhoCanGiveRevelation {
     
     revelation?: Revelation
 
+
+    /**
+     * Rev 1:1
+     * The Revelation of Jesus Christ, which God gave unto him
+     * 
+     * @param somebody WhoCanAcceptRevelation
+     */
     public giveRevelationTo(somebody: WhoCanAcceptRevelation)
     {
         if (this.revelation) {
@@ -21,8 +30,37 @@ export default class God implements WhoCanGiveRevelation {
     }
 
 
+    /**
+     * I don't know when did God create Jesus Crist.
+     * It has to be before the events of the Gospels and the Revelation.
+     * 
+     * @returns JesusCrist
+     */
     public createJesus(): JesusCrist
     {
         return new JesusCrist
+    }
+
+
+    /**
+     * God created many many angels.
+     * In this story I use only relevant entities.
+     * 
+     * @returns Angel
+     */
+    public createAngel(): Angel
+    {
+        return new Angel
+    }
+
+    
+    /**
+     * We can speculate when did God created John.
+     * However we can be sure It happened before the Revelation
+     * @returns John
+     */
+    public createJohn(): John
+    {
+        return new John
     }
 }
