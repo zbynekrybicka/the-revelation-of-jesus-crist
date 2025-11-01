@@ -1,19 +1,38 @@
+import God from "./classes/god"
+import JesusCrist from "./classes/JesusCrist"
+
+const god: God = new God
+const jesusCrist: JesusCrist = god.createJesus()
+const angel: Angel = god.createAngel()
+const john: John = god.createJohn()
+
 /**
  * Summary and conclusion of the entire book of Revelation
  * Revelation 1:1-8
  */
 // REV 1:1
-  // The Revelation of Jesus Christ, which God gave unto him, 
-    // to shew unto his servants things which must shortly come to pass;
+  // The Revelation of Jesus Christ, which God gave unto him,
+  god.giveRevelationTo(jesusCrist) // to shew unto his servants things which must shortly come to pass;
   // and he sent and signified it by his angel unto his servant John:
+  jesusCrist.giveRevelationTo(angel)
+  angel.giveRevelationTo(john)
 
 // REV 1:2
   // who bare record of the word of God, 
   // and of the testimony of Jesus Christ, and of all things that he saw.
+  const testimony: Testimony = john.testify()
 
 // REV 1:3
-  // Blessed is he that readeth, 
+  // Blessed is he that readeth,
+  const whoReads: WhoReads = john
+  whoReads.getBlessed()
   // and they that hear the words of this prophecy, 
+  const whoHears: WhoHear[] = [...people, ...nations, ...languages, ...kings]
+  for (const whoHear of whohears) {
+    if (whoHear.keepProhpecy()) {
+      whoHear.getBlessed()
+    }
+  }
   // and keep those things which are written therein: 
     // for the time is at hand.
 
