@@ -17,7 +17,6 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
                 expect(jesusCrist.hasRevelation()).toBeTruthy()
             })
 
-            
             it(`and he sent and signified it by his angel`, () => 
             {
                 jesusCrist.giveRevelationTo(angelWhoGiveRevelation)
@@ -25,7 +24,6 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
                 expect(jesusCrist.hasRevelation()).toBeFalsy()
                 expect(angelWhoGiveRevelation.hasRevelation()).toBeTruthy()
             })
-
             
             it(`unto his servant John:`, () => 
             {
@@ -34,9 +32,7 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
                 expect(angelWhoGiveRevelation.hasRevelation()).toBeFalsy()
                 expect(john.hasRevelation()).toBeTruthy()
             })
-
         })
-
 
         describe(`REV 1:2`, () => {
 
@@ -47,7 +43,6 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
 
                 expect(testimonyOfJesusCrist).toBe(revelation)
             })
-
         })
 
 
@@ -73,9 +68,7 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
                     expect(oneWhoHearWordOfGod.isBlessed()).toBeTruthy()
                 })
             })
-
         })
-
     })
 
 
@@ -86,9 +79,8 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
             it(`John to the seven churches which are in Asia:
             Grace be unto you, and peace, from him which is, and which was, and which is to come;`, () =>
             {
-                
-            })
 
+            })
             
             it('and from the seven Spirits which are before his throne;', () => 
             {
@@ -96,7 +88,5 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
             })
 
         })
-
     })
-
 })
