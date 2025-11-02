@@ -1,3 +1,4 @@
+import Revelation from "../classes/revelation";
 import WhoCanAcceptRevelation from "./whoCanAcceptRevelation";
 
 /**
@@ -9,5 +10,7 @@ import WhoCanAcceptRevelation from "./whoCanAcceptRevelation";
  */
 export default interface WhoCanGiveRevelation {
     
+    acceptRevelation(revelation: Revelation): void
     giveRevelationTo(somebody: WhoCanAcceptRevelation): void
+    hasRevelation(): boolean
 }

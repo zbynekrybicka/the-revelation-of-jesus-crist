@@ -1,7 +1,6 @@
 export default interface WhoHearWordOfGod
 {
-    getBlessed(): void
+    isBlessed(): boolean
     keepProphecy(): boolean
-
-
+    getBlessed(): void
 }

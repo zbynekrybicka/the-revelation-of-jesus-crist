@@ -1,8 +1,5 @@
-import Revelation from "../classes/revelation"
-
 export default interface WhoReadWordOfGod
 {
+    isBlessed(): boolean
     getBlessed(): void
-    testify(): Revelation
-
 }

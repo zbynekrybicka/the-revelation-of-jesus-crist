@@ -1,7 +1,7 @@
 import { sevenChurches } from "../enums/sevenChurchesInAsia";
-import WhoCanAcceptRevelation from "../interfaces/whoCanAcceptRevelation";
 import WhoCanGiveRevelation from "../interfaces/whoCanGiveRevelation";
-import Angel from "./angel";
+import WhoReadWordOfGod from "../interfaces/whoReadWordOfGod";
+import AngelWhoGiveRevelation from "./angelWhoGiveRevelation";
 import ChurchInAsia from "./churchInAsia";
 import JesusCrist from "./JesusCrist";
 import John from "./john";
@@ -12,25 +12,65 @@ import Spirit from "./spirit";
  * Genesis 1:1 In the beginning God created the heaven and the earth.
  * John 1:1 In the beginning was the Word, and the Word was with God, and the Word was God.
  */
-export default class God implements WhoCanGiveRevelation {
+export default class God implements 
+    WhoCanGiveRevelation
+{
     
     revelation?: Revelation
+
+    jesusCrist?: JesusCrist
+    john?: John
 
 
     /**
      * Rev 1:1
      * The Revelation of Jesus Christ, which God gave unto him
-     * 
-     * @param somebody WhoCanAcceptRevelation
      */
-    giveRevelationTo(somebody: WhoCanAcceptRevelation)
+    writeRevelation(): Revelation
+    {
+        this.revelation = new Revelation
+        return this.revelation
+    }
+
+
+    /**
+     * REV 1:1
+     * Accept Revelation
+     * 
+     * @param revelation 
+     */
+    acceptRevelation(revelation: Revelation): void 
+    {
+        this.revelation = revelation
+    }
+
+
+    /**
+     * Rev 1:1
+     * 
+     * Give Revelation To
+     * @param somebody WhoCanGiveRevelation
+     */
+    giveRevelationTo(somebody: WhoCanGiveRevelation)
     {
         if (this.revelation) {
             somebody.acceptRevelation(this.revelation)
-        } else {
-            throw "The revelation cannot be given because he doesn't have it."
+            delete this.revelation
         }
     }
+
+
+    /**
+     * REV 1:1
+     * Has Revelation
+     * @returns boolean
+     */
+    hasRevelation(): boolean
+    {
+        return !!this.revelation    
+    }
+
+
 
 
     /**
@@ -41,7 +81,8 @@ export default class God implements WhoCanGiveRevelation {
      */
     createJesus(): JesusCrist
     {
-        return new JesusCrist
+        this.jesusCrist = new JesusCrist
+        return this.jesusCrist
     }
 
 
@@ -49,11 +90,11 @@ export default class God implements WhoCanGiveRevelation {
      * God created many many angels.
      * In this story I use only relevant entities.
      * 
-     * @returns Angel
+     * @returns AngelWhoGiveRevelation
      */
-    createAngel(): Angel
+    createAngelWhoGiveRevelation(): AngelWhoGiveRevelation
     {
-        return new Angel
+        return new AngelWhoGiveRevelation
     }
 
     
@@ -64,7 +105,8 @@ export default class God implements WhoCanGiveRevelation {
      */
     createJohn(): John
     {
-        return new John
+        this.john = new John
+        return this.john
     }
 
 
@@ -93,22 +135,11 @@ export default class God implements WhoCanGiveRevelation {
     }
 
 
-    /**
-     * Rev 1:1
-     * The Revelation of Jesus Christ, which God gave unto him
-     */
-    writeRevelation(): void
+
+    blessWhoReads(): WhoReadWordOfGod | undefined
     {
-        this.revelation = new Revelation
+        this.john?.getBlessed()
+        return this.john
     }
 
-
-    /**
-     * God says
-     * @param whatSays string
-     */
-    says(whatSays: string): void
-    {
-
-    }
 }

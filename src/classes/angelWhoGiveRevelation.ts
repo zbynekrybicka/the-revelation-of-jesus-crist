@@ -1,17 +1,18 @@
 import WhoCanGiveRevelation from "../interfaces/whoCanGiveRevelation";
+import Angel from "./angel";
 import Revelation from "./revelation";
 
-export default class JesusCrist implements WhoCanGiveRevelation 
+export default class AngelWhoGiveRevelation extends Angel implements WhoCanGiveRevelation
 {
 
-    revelation?: Revelation
+    revelation?: Revelation;
 
 
     /**
      * Rev 1:1
      * Accept Revelation
      * 
-     * @param revelation Revelation
+     * @param revelation 
      */
     acceptRevelation(revelation: Revelation): void
     {
@@ -20,7 +21,7 @@ export default class JesusCrist implements WhoCanGiveRevelation
 
 
     /**
-     * REV 1:1
+     * Rev 1:1
      * Give Revelation To
      * 
      * @param somebody WhoCanGiveRevelation
@@ -30,18 +31,19 @@ export default class JesusCrist implements WhoCanGiveRevelation
         if (this.revelation) {
             somebody.acceptRevelation(this.revelation)
             delete this.revelation
-        }
+        }        
     }
 
 
     /**
-     * REV 1:1
+     * Rev 1:1
      * Has Revelation
+     * 
+     * @returns boolean
      */
-    hasRevelation(): boolean {
+    hasRevelation(): boolean 
+    {
         return !!this.revelation
     }
     
-
-
 }
