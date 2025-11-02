@@ -1,11 +1,17 @@
+import EternalLife from "../interfaces/EternalLife";
 import WhoCanGiveRevelation from "../interfaces/whoCanGiveRevelation";
 import WhoSinned from "../interfaces/whoSinned";
 import Revelation from "./revelation";
+import Spirit from "./spirit";
 
-export default class JesusCrist implements WhoCanGiveRevelation 
+export default class JesusChrist extends Spirit implements 
+    WhoCanGiveRevelation, 
+    EternalLife
 {
 
-    revelation?: Revelation
+    revelation: Revelation | undefined
+    eternalLife: boolean = false
+    spiritEntities: any[] = []
 
 
     /**
@@ -30,7 +36,7 @@ export default class JesusCrist implements WhoCanGiveRevelation
     {
         if (this.revelation) {
             somebody.acceptRevelation(this.revelation)
-            delete this.revelation
+            this.revelation = undefined
         }
     }
 
@@ -47,6 +53,30 @@ export default class JesusCrist implements WhoCanGiveRevelation
     washFromSins(whoAll: WhoSinned[])
     {
         whoAll.forEach((who: WhoSinned) => who.washedFromSinBy(this))
+    }
+
+
+    gloryAndDominitionToHim(): void
+    {
+        this.eternalLife = true
+    }
+
+
+    hasEternalLife(): boolean 
+    {
+        return this.eternalLife
+    }
+
+
+    giveSpiritEntities(entities: any[]): void
+    {
+        this.spiritEntities.push(...entities)
+    }
+
+
+    hasSpiritEntity(what: any): boolean
+    {
+        return this.spiritEntities.includes(what)
     }
 
 

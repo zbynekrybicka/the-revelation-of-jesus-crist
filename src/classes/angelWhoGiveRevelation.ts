@@ -5,7 +5,7 @@ import Revelation from "./revelation";
 export default class AngelWhoGiveRevelation extends Angel implements WhoCanGiveRevelation
 {
 
-    revelation?: Revelation;
+    revelation: Revelation | undefined;
 
 
     /**
@@ -30,7 +30,7 @@ export default class AngelWhoGiveRevelation extends Angel implements WhoCanGiveR
     {
         if (this.revelation) {
             somebody.acceptRevelation(this.revelation)
-            delete this.revelation
+            this.revelation = undefined
         }        
     }
 

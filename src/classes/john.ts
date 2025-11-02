@@ -2,17 +2,23 @@ import WhoCanAcceptGraceAndPeace from "../interfaces/whoCanAcceptGraceAndPeace";
 import WhoCanGiveRevelation from "../interfaces/whoCanGiveRevelation";
 import WhoHearWordOfGod from "../interfaces/whoHearWordOfGod";
 import WhoReadWordOfGod from "../interfaces/whoReadWordOfGod";
-import GraceAndPeace from "./graceAndPeace";
+import Human from "./human";
+import Place from "./place";
 import Revelation from "./revelation";
-import TestimonyOfJesusCrist from "./testimonyOfJesusCrist";
 
 
-export default class John implements WhoCanGiveRevelation, WhoReadWordOfGod {
+export default class John extends Human implements WhoCanGiveRevelation, WhoReadWordOfGod {
 
     revelation?: Revelation
     m_isBlessed: boolean = true
-    graceAndPeace?: GraceAndPeace
+    m_location: Place
 
+
+    constructor(place: Place)
+    {
+        super()
+        this.m_location = place
+    }
 
     /**
      * Rev 1:1
@@ -56,7 +62,7 @@ export default class John implements WhoCanGiveRevelation, WhoReadWordOfGod {
      * Rev 1:2
      * who bare record of the word of God, and of the testimony of Jesus Christ, and of all things that he saw. 
      */
-    testify(): TestimonyOfJesusCrist
+    testify(): TestimonyOfJesusChrist
     {
         if (this.revelation) {
             return this.revelation
@@ -98,24 +104,15 @@ export default class John implements WhoCanGiveRevelation, WhoReadWordOfGod {
 
     /**
      * REV 1:4
-     * @returns GraceAndPeace
+     * @returns Revelation
      */
-    writeGraceAndPeace(): GraceAndPeace
+    getGraceAndPeace(): Revelation | undefined
     {
-        this.graceAndPeace = new GraceAndPeace
-        return this.graceAndPeace
-    }
-
-
-    /**
-     * REV 1:4
-     * REV 1:5
-     * REV 1:6
-     * @returns GraceAndPeace | undefined
-     */
-    getGraceAndPeace(): GraceAndPeace | undefined
-    {
-        return this.graceAndPeace
+        if (this.revelation) {
+            return this.revelation
+        } else {
+            throw "Cannot write Grace and Peace beacuse he has not got the Revelation"
+        }
     }
 
 
@@ -125,9 +122,21 @@ export default class John implements WhoCanGiveRevelation, WhoReadWordOfGod {
      * @param graceAndPeace 
      * @param everybody 
      */
-    sendGraceAndPeace(graceAndPeace: GraceAndPeace, somebody: WhoCanAcceptGraceAndPeace): void
+    sendGraceAndPeace(graceAndPeace: Revelation, somebody: WhoCanAcceptGraceAndPeace): void
     {
         somebody.acceptGraceAndPeace(graceAndPeace)
+    }
+
+
+    sendLetter(letter: Revelation, somebody: WhoCanAcceptGraceAndPeace): void
+    {
+        this.sendGraceAndPeace(letter, somebody)
+    }
+
+
+    location(): Place
+    {
+        return this.m_location
     }
 
 }

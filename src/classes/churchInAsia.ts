@@ -1,17 +1,24 @@
 import WhatHaveYouSeen from "../interfaces/whatHaveYouSeen"
 import WhoCanAcceptGraceAndPeace from "../interfaces/whoCanAcceptGraceAndPeace"
-import GraceAndPeace from "./graceAndPeace"
-import JesusCrist from "./JesusCrist"
+import Angel from "./angel"
+import JesusChrist from "./JesusChrist"
+import Revelation from "./revelation"
+import Satan from "./satan"
+import Spirit from "./spirit"
 
 export default class ChurchInAsia implements WhoCanAcceptGraceAndPeace, WhatHaveYouSeen
 {
     title: string
-    graceAndPeace?: GraceAndPeace
+    graceAndPeace?: Revelation
+    spirit: Spirit
+    angel: Angel
 
 
-    constructor(title: string)
+    constructor(title: string, angel: Angel, spirit: Spirit)
     {
         this.title = title
+        this.angel = angel
+        this.spirit = spirit
     }
 
 
@@ -21,18 +28,24 @@ export default class ChurchInAsia implements WhoCanAcceptGraceAndPeace, WhatHave
      * Grace be unto you, and peace,
      * @param graceAndPeace GraceAndPeace
      */
-    acceptGraceAndPeace(graceAndPeace: GraceAndPeace): void
+    acceptGraceAndPeace(graceAndPeace: Revelation): void
     {
-        this.graceAndPeace = graceAndPeace
+        graceAndPeace
+    }
+
+
+    hasLetter(): boolean
+    {
+        return !!this.graceAndPeace
     }
 
 
     /**
      * REV 1:7
      * and every eye shall see him, and they also which pierced him:
-     * @param he JesusCrist
+     * @param he JesusChrist
      */
-    seeHim(he: JesusCrist): void
+    seeHim(he: JesusChrist): void
     {
 
     }
@@ -41,11 +54,29 @@ export default class ChurchInAsia implements WhoCanAcceptGraceAndPeace, WhatHave
     /**
      * REV 1:7
      * and all kindreds of the earth shall wail because of him. Even so, Amen
-     * @param somebody JesusCrist
+     * @param somebody JesusChrist
      */
-    beatFor(somebody: JesusCrist): void
+    beatFor(somebody: JesusChrist): void
     {
 
+    }
+
+
+    getSpirit(): Spirit
+    {
+        return this.spirit
+    }
+
+
+    pierceSpirit(): void
+    {
+        this.spirit = new Satan
+    }
+
+
+    getAngel(): Angel
+    {
+        return this.angel
     }
 
 }

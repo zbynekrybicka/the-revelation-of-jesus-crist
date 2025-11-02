@@ -4,22 +4,26 @@ import WhoReadWordOfGod from "../interfaces/whoReadWordOfGod";
 import AngelWhoGiveRevelation from "./angelWhoGiveRevelation";
 import ChurchInAsia from "./churchInAsia";
 import Human from "./human";
-import JesusCrist from "./JesusCrist";
+import JesusChrist from "./JesusChrist";
 import John from "./john";
+import Place from "./place";
 import Revelation from "./revelation";
 import Spirit from "./spirit";
+import BodySpirit from "./bodySpirit";
+import WordOfTheCourt from "./wordOfTheCourt";
+import AngelOfChurch from "./angelOfChurch";
 
 /**
  * Genesis 1:1 In the beginning God created the heaven and the earth.
  * John 1:1 In the beginning was the Word, and the Word was with God, and the Word was God.
  */
-export default class God implements 
+export default class God extends Spirit implements 
     WhoCanGiveRevelation
 {
     
-    revelation?: Revelation
+    revelation: Revelation | undefined
 
-    jesusCrist?: JesusCrist
+    jesusChrist?: JesusChrist
     john?: John
 
 
@@ -31,6 +35,12 @@ export default class God implements
     {
         this.revelation = new Revelation
         return this.revelation
+    }
+
+
+    createWordOfTheCourt(): WordOfTheCourt
+    {
+        return new WordOfTheCourt
     }
 
 
@@ -56,7 +66,7 @@ export default class God implements
     {
         if (this.revelation) {
             somebody.acceptRevelation(this.revelation)
-            delete this.revelation
+            this.revelation = undefined
         }
     }
 
@@ -75,15 +85,15 @@ export default class God implements
 
 
     /**
-     * I don't know when did God create Jesus Crist.
+     * I don't know when did God create Jesus Christ.
      * It has to be before the events of the Gospels and the Revelation.
      * 
-     * @returns JesusCrist
+     * @returns JesusChrist
      */
-    createJesus(): JesusCrist
+    createJesus(): JesusChrist
     {
-        this.jesusCrist = new JesusCrist
-        return this.jesusCrist
+        this.jesusChrist = new JesusChrist
+        return this.jesusChrist
     }
 
 
@@ -106,8 +116,21 @@ export default class God implements
      */
     createJohn(): John
     {
-        this.john = new John
+        const patmos = this.createPlace("Patmos")
+        this.john = new John(patmos)
         return this.john
+    }
+
+
+    createBodySpirit(human: Human): BodySpirit
+    {
+        return new BodySpirit(human)
+    }
+
+
+    createAngelOfChurch(): AngelOfChurch
+    {
+        return new AngelOfChurch
     }
 
 
@@ -115,11 +138,12 @@ export default class God implements
      * 
      * @returns ChurchInAsia[]
      */
-    createChurchesInAsia(): ChurchInAsia[]
+    createChurchesInAsia(spirit: Spirit): ChurchInAsia[]
     {
         const sevenChurchesInAsia: ChurchInAsia[] = []
         for (const church in sevenChurches) {
-            sevenChurchesInAsia[church] = new ChurchInAsia(sevenChurches[church] as string)
+            const angel = this.createAngelOfChurch()
+            sevenChurchesInAsia[church] = new ChurchInAsia(sevenChurches[church] as string, angel, spirit)
         }
         return sevenChurchesInAsia
     }
@@ -139,6 +163,12 @@ export default class God implements
     createWeAll(): Human[]
     {
         return []
+    }
+
+
+    createPlace(title: string): Place
+    {
+        return new Place(title)
     }
 
 

@@ -1,6 +1,6 @@
-import GraceAndPeace from "../classes/graceAndPeace";
+import Revelation from "../classes/revelation";
 
 export default interface WhoCanAcceptGraceAndPeace 
 {
-    acceptGraceAndPeace(graceAndPeace: GraceAndPeace): void
+    acceptGraceAndPeace(graceAndPeace: Revelation): void
 }

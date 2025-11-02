@@ -1,7 +1,7 @@
-import JesusCrist from "../classes/JesusCrist";
+import JesusChrist from "../classes/JesusChrist";
 
 export default interface WhoSinned
 {
-    washedFromSinBy(jesusCrist: JesusCrist): void
+    washedFromSinBy(jesusChrist: JesusChrist): void
     amAlreadySinner(): boolean
 }

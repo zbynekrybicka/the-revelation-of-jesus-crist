@@ -1,13 +1,21 @@
+import EternalLife from "../interfaces/EternalLife";
 import KingAndPriest from "../interfaces/kingAndPriest";
 import WhoHearWordOfGod from "../interfaces/whoHearWordOfGod";
 import WhoSinned from "../interfaces/whoSinned";
-import JesusCrist from "./JesusCrist";
+import JesusChrist from "./JesusChrist";
 
-export default class Human implements WhoSinned, KingAndPriest, WhoHearWordOfGod {
+export default class Human implements 
+    WhoSinned, 
+    KingAndPriest, 
+    WhoHearWordOfGod, 
+    EternalLife 
+{
 
     sinner: boolean = true
+    eternalLife: boolean = false
+    blessed: boolean = false
 
-    washedFromSinBy(jesusCrist: JesusCrist): void 
+    washedFromSinBy(jesusChrist: JesusChrist): void 
     {
         this.sinner = false
     }
@@ -17,14 +25,24 @@ export default class Human implements WhoSinned, KingAndPriest, WhoHearWordOfGod
         return this.sinner
     }
 
-    isBlessed(): boolean {
-        throw new Error("Method not implemented.");
+    isBlessed(): boolean 
+    {
+        return this.blessed
     }
-    keepProphecy(): boolean {
-        throw new Error("Method not implemented.");
+
+    keepProphecy(): void
+    {
+        this.blessed = true
     }
+    
     getBlessed(): void {
-        throw new Error("Method not implemented.");
+        this.blessed = true
     }
+
+    hasEternalLife(): boolean
+    {
+        return this.eternalLife
+    }
+
 
 }
