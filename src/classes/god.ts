@@ -3,6 +3,7 @@ import WhoCanGiveRevelation from "../interfaces/whoCanGiveRevelation";
 import WhoReadWordOfGod from "../interfaces/whoReadWordOfGod";
 import AngelWhoGiveRevelation from "./angelWhoGiveRevelation";
 import ChurchInAsia from "./churchInAsia";
+import Human from "./human";
 import JesusCrist from "./JesusCrist";
 import John from "./john";
 import Revelation from "./revelation";
@@ -134,6 +135,11 @@ export default class God implements
         return new Array(7).fill(null).map(() => new Spirit)
     }
 
+
+    createWeAll(): Human[]
+    {
+        return []
+    }
 
 
     blessWhoReads(): WhoReadWordOfGod | undefined

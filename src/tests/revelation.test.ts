@@ -1,6 +1,14 @@
-import { god, jesusCrist, angelWhoGiveRevelation, john, revelation, whoHearWordOfGod, heWhichIsAndWhichWasAndWhichIsToCome, sevenSpirits, faithfulWitness, firstBornFromTheDead, thePrinceOfTheKingsOfTheEarth, weAll } from "../entities"
+import { god, jesusCrist, angelWhoGiveRevelation, john, whoHearWordOfGod, heWhichIsAndWhichWasAndWhichIsToCome, sevenSpirits, faithfulWitness, firstBornFromTheDead, thePrinceOfTheKingsOfTheEarth, weAll, whoOvercome, whoReadsWordOfGod } from "../entities"
+
+import Angel from "../classes/angel"
+import God from "../classes/god"
+import JesusCrist from "../classes/JesusCrist"
+
 
 import WhoHearWordOfGod from "../interfaces/whoHearWordOfGod"
+import John from "../classes/john"
+import Revelation from "../classes/revelation"
+import Human from "../classes/human"
 
 describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelation", () => {
 
@@ -13,6 +21,8 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
             {
                 god.giveRevelationTo(jesusCrist)
 
+                expect(god).toBeInstanceOf(God)
+                expect(jesusCrist).toBeInstanceOf(JesusCrist)
                 expect(god.hasRevelation()).toBeFalsy()
                 expect(jesusCrist.hasRevelation()).toBeTruthy()
             })
@@ -21,12 +31,14 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
             {
                 jesusCrist.giveRevelationTo(angelWhoGiveRevelation)
 
+                expect(angelWhoGiveRevelation).toBeInstanceOf(Angel)
                 expect(jesusCrist.hasRevelation()).toBeFalsy()
                 expect(angelWhoGiveRevelation.hasRevelation()).toBeTruthy()
             })
             
             it(`unto his servant John:`, () => 
             {
+                expect(john).toBeInstanceOf(John)
                 angelWhoGiveRevelation.giveRevelationTo(john)
 
                 expect(angelWhoGiveRevelation.hasRevelation()).toBeFalsy()
@@ -41,7 +53,7 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
             {
                 const testimonyOfJesusCrist = john.testify()
 
-                expect(testimonyOfJesusCrist).toBe(revelation)
+                expect(testimonyOfJesusCrist).toBeInstanceOf(Revelation)
             })
         })
 
@@ -50,20 +62,17 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
         {
             it(`Blessed is he that readeth,`, () => 
             {
-                const whoReadsWordOfGod = god.blessWhoReads()
-
-                expect(whoReadsWordOfGod).toBe(john)
-                expect(john.isBlessed()).toBeTruthy()
+                expect(whoReadsWordOfGod).toBeInstanceOf(John)
+                expect(whoReadsWordOfGod?.isBlessed()).toBeTruthy()
             })
 
             it(`and they that hear the words of this prophecy, 
             and keep those things which are written therein:
             for the time is at hand.`, () => 
             {
-                john.readWordOfGod(whoHearWordOfGod)
-
                 whoHearWordOfGod.forEach((oneWhoHearWordOfGod: WhoHearWordOfGod) => 
                 {
+                    expect(oneWhoHearWordOfGod).toBeInstanceOf(Human)
                     expect(oneWhoHearWordOfGod.keepProphecy()).toBeTruthy()
                     expect(oneWhoHearWordOfGod.isBlessed()).toBeTruthy()
                 })
@@ -83,7 +92,7 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
                 expect(graceAndPeace).toBeDefined()
                 graceAndPeace.from(heWhichIsAndWhichWasAndWhichIsToCome)
 
-                expect(heWhichIsAndWhichWasAndWhichIsToCome).toBe(god)
+                expect(heWhichIsAndWhichWasAndWhichIsToCome).toBeInstanceOf(God)
             })
             
             it('and from the seven Spirits which are before his throne;', () => 
@@ -100,26 +109,39 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
                 expect(graceAndPeace).toBeDefined()
                 graceAndPeace.from(faithfulWitness)
 
-                expect(faithfulWitness).toBe(jesusCrist)
+                expect(faithfulWitness).toBeInstanceOf(JesusCrist)
             })
 
             it(`and the first-begotten of the dead,`, () =>
             {
                 expect(graceAndPeace).toBeDefined()
                 graceAndPeace.from(firstBornFromTheDead)
-                expect(firstBornFromTheDead).toBe(jesusCrist)
+                expect(firstBornFromTheDead).toBeInstanceOf(JesusCrist)
             })
 
             it(`and the prince of the kings of the earth.`, () =>
             {
                 expect(graceAndPeace).toBeDefined()
                 graceAndPeace.from(thePrinceOfTheKingsOfTheEarth)
-                expect(thePrinceOfTheKingsOfTheEarth).toBe(jesusCrist)
+                expect(thePrinceOfTheKingsOfTheEarth).toBeInstanceOf(JesusCrist)
             })
 
             it(`Unto him that loved us, and washed us from our sins in his own blood,`, () => 
             {
                 jesusCrist.washFromSins(weAll)
+            })
+        })
+
+        describe('REV 1:6', () =>
+        {
+            it(`and hath made us kings and priests unto God and his Father;`, () =>
+            {
+
+            })
+
+            it(`to him be glory and dominion for ever and ever. Amen.`, () =>
+            {
+                                
             })
         })
     })

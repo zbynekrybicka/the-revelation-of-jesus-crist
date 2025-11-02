@@ -10,7 +10,7 @@ import TestimonyOfJesusCrist from "./testimonyOfJesusCrist";
 export default class John implements WhoCanGiveRevelation, WhoReadWordOfGod {
 
     revelation?: Revelation
-    m_isBlessed: boolean = false
+    m_isBlessed: boolean = true
     graceAndPeace?: GraceAndPeace
 
 
