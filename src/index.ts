@@ -4,9 +4,14 @@ import God from "./classes/god"
 import GraceAndPeace from "./classes/graceAndPeace"
 import JesusCrist from "./classes/JesusCrist"
 import John from "./classes/john"
+import SonOfMan from "./classes/sonOfMan"
 import Spirit from "./classes/spirit"
 import TestimonyOfJesusCrist from "./classes/testimonyOfJesusCrist"
+import { Ephesus, Laodicea, Pergamos, Philadelphia, Sardis, Smyrna, Thyatira } from "./enums/sevenChurchesInAsia"
+import AlphaAndOmegaTheBeginingAndTheEnding from "./interfaces/alphaAndOmegaTheBeginingAndTheEnding"
 import HeWhichIsWhichWasAndWhichIsToCome from "./interfaces/heWhichIsWhichWasAndWhichIsToCome"
+import TheFirstAndTheLast from "./interfaces/theFirstAndTheLast"
+import WhatHaveYouSeen from "./interfaces/whatHaveYouSeen"
 import WhoHearWordOfGod from "./interfaces/whoHearWordOfGod"
 import WhoIsFirstBegottenOfTheDead from "./interfaces/whoIsFirstBegottenOfTheDead"
 import WhoIsPrinceOfTheKingsOfTheEarth from "./interfaces/whoIsPrinceOfTheKingsOfTheEarth"
@@ -40,6 +45,7 @@ const sevenSpirits: Spirit[] = god.createSevenSpirits()
 
 const everyEye: ChurchInAsia[] = churchesInAsia
 const earthTribes: ChurchInAsia[] = churchesInAsia
+const sevenStars: ChurchInAsia[] = churchesInAsia
 
 god.writeRevelation()
 /**
@@ -130,7 +136,7 @@ god.writeRevelation()
 
 // REV 1:8
     // I am Alpha and Omega, the beginning and the ending,
-        god.says("I am Alpha and Omega, the begining and the ending.")
+        const alphaAndOmegaTheBeginingAndTheEnding: AlphaAndOmegaTheBeginingAndTheEnding = god
     // saith the Lord, which is, and which was, and which is to come, the Almighty.
         god === heWhichIsWhichWasAndWhichIsToCome
 
@@ -142,24 +148,42 @@ god.writeRevelation()
   // I John, who also am your brother, and companion in tribulation, 
   // and in the kingdom and patience of Jesus Christ, was in the isle that is called Patmos, 
   // for the word of God, and for the testimony of Jesus Christ.
+    john.exilOn(patmos)
 
 // REV 1:10
   // I was in the Spirit on the Lord's day,
+    john.getSpirit()
   // and heard behind me a great voice, as of a trumpet,
 
 // REV 1:11
   // saying, I am Alpha and Omega, the first and the last: 
+    jesusCrist.says("I am Alpha and Omega, the first and the last.")
   // and, What thou seest, write in a book,
+    const whatHaveYouSeen: Set<WhatHaveYouSeen> = new Set<WhatHaveYouSeen>
   // and send it unto the seven churches which are in Asia; 
   // unto Ephesus, and unto Smyrna, and unto Pergamos, and unto Thyatira,
   // and unto Sardis, and unto Philadelphia, and unto Laodicea.
+    jesusCrist.ordersToSend(whatHaveYouSeen, [
+        churchesInAsia[Ephesus],
+        churchesInAsia[Smyrna],
+        churchesInAsia[Pergamos],
+        churchesInAsia[Thyatira],
+        churchesInAsia[Sardis],
+        churchesInAsia[Philadelphia],
+        churchesInAsia[Laodicea]
+    ])
 
 // REV 1:12
   // And I turned to see the voice that spake with me.
   // And being turned, I saw seven golden candlesticks;
+    const sevenCandlesticks: ChurchInAsia[] = churchesInAsia
+    sevenCandlesticks.forEach((candleStick: ChurchInAsia) => whatHaveYouSeen.add(candleStick))
 
 // REV 1:13
   // and in the midst of the seven candlesticks one like unto the Son of man,
+    const sonOfMan: SonOfMan = jesusCrist
+    whatHaveYouSeen.add(sonOfMan)
+
   // clothed with a garment down to the foot, 
   // and girt about the paps with a golden girdle.
 
@@ -180,10 +204,12 @@ god.writeRevelation()
   // And when I saw him, I fell at his feet as dead.
   // And he laid his right hand upon me,
   // saying unto me, Fear not; I am the first and the last:
+    const theFirstAndTheLast: TheFirstAndTheLast = sonOfMan
 
 // REV 1:18
   // I am he that liveth, and was dead; and, behold, I am alive for evermore, Amen;
   // and have the keys of hell and of death.
+    sonOfMan.hasKeys(keysOfHellAndDeath)
 
 // REV 1:19
   // Write the things which thou hast seen,
@@ -194,3 +220,49 @@ god.writeRevelation()
   // the mystery of the seven stars which thou sawest in my right hand, and the seven golden candlesticks. 
   // The seven stars are the angels of the seven churches: 
   // and the seven candlesticks which thou sawest are the seven churches.
+    sevenStars === churchesInAsia
+    sevenCandlesticks === churchesInAsia
+
+
+/**
+ * Revelation 2: The letters sent to seven churches
+ */
+// REV 2:1 
+    // Unto the angel of the church of Ephesus write; 
+    // These things saith he that holdeth the seven stars in his right hand, 
+    // who walketh in the midst of the seven golden candlesticks.
+
+
+// REV 2:2
+  // I know thy works, and thy labor, and thy patience, 
+  // and how thou canst not bear them which are evil: 
+  // and thou hast tried them which say they are apostles, 
+  // and are not, and hast found them liars: 
+
+
+// REV 2:3
+    // and hast borne, and hast patience, and for my name's sake hast labored, and hast not fainted. 
+
+    
+// REV 2:4    
+    // Nevertheless I have somewhat against thee, 
+    // because thou hast left thy first love. 
+
+
+// REV 2:5
+    // Remember therefore from whence thou art fallen, 
+    // and repent, and do the first works; 
+    // or else I will come unto thee quickly, 
+    // and will remove thy candlestick out of his place, 
+    // except thou repent. 
+
+
+// REV 2:6
+    // But this thou hast, that thou hatest the deeds of the Nicola´itans, 
+    // which I also hate. 
+
+
+// REV 2:7    
+    // He that hath an ear, let him hear what the Spirit saith unto the churches; 
+    // To him that overcometh will I give to eat of the tree of life, 
+    // which is in the midst of the paradise of God.

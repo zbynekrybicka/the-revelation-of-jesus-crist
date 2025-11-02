@@ -1,8 +1,9 @@
+import WhatHaveYouSeen from "../interfaces/whatHaveYouSeen"
 import WhoCanAcceptGraceAndPeace from "../interfaces/whoCanAcceptGraceAndPeace"
 import GraceAndPeace from "./graceAndPeace"
 import JesusCrist from "./JesusCrist"
 
-export default class ChurchInAsia implements WhoCanAcceptGraceAndPeace
+export default class ChurchInAsia implements WhoCanAcceptGraceAndPeace, WhatHaveYouSeen
 {
     title: string
     graceAndPeace?: GraceAndPeace

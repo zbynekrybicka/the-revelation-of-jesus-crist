@@ -1,3 +1,4 @@
+import WhatHaveYouSeen from "../interfaces/whatHaveYouSeen";
 import WhoCanAcceptRevelation from "../interfaces/whoCanAcceptRevelation";
 import WhoCanGiveRevelation from "../interfaces/whoCanGiveRevelation";
 import WhoIsFirstBegottenOfTheDead from "../interfaces/whoIsFirstBegottenOfTheDead";
@@ -14,7 +15,8 @@ export default class JesusCrist implements
     WhoIsFirstBegottenOfTheDead,
     WhoIsPrinceOfTheKingsOfTheEarth,
     WhoWashedUsFromOurSins,
-    WhoMadeUsKingsAndPriests {
+    WhoMadeUsKingsAndPriests,
+    WhatHaveYouSeen {
     
     revelation?: Revelation
 
