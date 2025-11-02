@@ -1,4 +1,4 @@
-import { god, jesusCrist, angelWhoGiveRevelation, john, revelation, whoHearWordOfGod } from "../entities"
+import { god, jesusCrist, angelWhoGiveRevelation, john, revelation, whoHearWordOfGod, heWhichIsAndWhichWasAndWhichIsToCome, sevenSpirits, faithfulWitness, firstBornFromTheDead, thePrinceOfTheKingsOfTheEarth, weAll } from "../entities"
 
 import WhoHearWordOfGod from "../interfaces/whoHearWordOfGod"
 
@@ -74,19 +74,53 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
 
     describe('Greetings to the Seven Churches', () => 
     {
+        const graceAndPeace = john.writeGraceAndPeace()
         describe('REV 1:4', () => 
         {
             it(`John to the seven churches which are in Asia:
             Grace be unto you, and peace, from him which is, and which was, and which is to come;`, () =>
             {
+                expect(graceAndPeace).toBeDefined()
+                graceAndPeace.from(heWhichIsAndWhichWasAndWhichIsToCome)
 
+                expect(heWhichIsAndWhichWasAndWhichIsToCome).toBe(god)
             })
             
             it('and from the seven Spirits which are before his throne;', () => 
             {
+                expect(graceAndPeace).toBeDefined()
+                graceAndPeace.fromAll(sevenSpirits)
+            })
+        })
 
+        describe('REV 1:5', () =>
+        {
+            it(`and from Jesus Christ, who is the faithful witness,`, () =>
+            {
+                expect(graceAndPeace).toBeDefined()
+                graceAndPeace.from(faithfulWitness)
+
+                expect(faithfulWitness).toBe(jesusCrist)
             })
 
+            it(`and the first-begotten of the dead,`, () =>
+            {
+                expect(graceAndPeace).toBeDefined()
+                graceAndPeace.from(firstBornFromTheDead)
+                expect(firstBornFromTheDead).toBe(jesusCrist)
+            })
+
+            it(`and the prince of the kings of the earth.`, () =>
+            {
+                expect(graceAndPeace).toBeDefined()
+                graceAndPeace.from(thePrinceOfTheKingsOfTheEarth)
+                expect(thePrinceOfTheKingsOfTheEarth).toBe(jesusCrist)
+            })
+
+            it(`Unto him that loved us, and washed us from our sins in his own blood,`, () => 
+            {
+                jesusCrist.washFromSins(weAll)
+            })
         })
     })
 })

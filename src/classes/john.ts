@@ -11,6 +11,7 @@ export default class John implements WhoCanGiveRevelation, WhoReadWordOfGod {
 
     revelation?: Revelation
     m_isBlessed: boolean = false
+    graceAndPeace?: GraceAndPeace
 
 
     /**
@@ -92,6 +93,29 @@ export default class John implements WhoCanGiveRevelation, WhoReadWordOfGod {
     readWordOfGod(whoHearWordOfGod: WhoHearWordOfGod[])
     {
         whoHearWordOfGod.forEach((oneWhoHearWordOfGod: WhoHearWordOfGod) => oneWhoHearWordOfGod.getBlessed())
+    }
+
+
+    /**
+     * REV 1:4
+     * @returns GraceAndPeace
+     */
+    writeGraceAndPeace(): GraceAndPeace
+    {
+        this.graceAndPeace = new GraceAndPeace
+        return this.graceAndPeace
+    }
+
+
+    /**
+     * REV 1:4
+     * REV 1:5
+     * REV 1:6
+     * @returns GraceAndPeace | undefined
+     */
+    getGraceAndPeace(): GraceAndPeace | undefined
+    {
+        return this.graceAndPeace
     }
 
 

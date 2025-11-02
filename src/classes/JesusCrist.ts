@@ -1,4 +1,5 @@
 import WhoCanGiveRevelation from "../interfaces/whoCanGiveRevelation";
+import WhoSinned from "../interfaces/whoSinned";
 import Revelation from "./revelation";
 
 export default class JesusCrist implements WhoCanGiveRevelation 
@@ -42,6 +43,11 @@ export default class JesusCrist implements WhoCanGiveRevelation
         return !!this.revelation
     }
     
+
+    washFromSins(whoAll: WhoSinned[])
+    {
+        whoAll.forEach((who: WhoSinned) => who.washedFromSinBy(this))
+    }
 
 
 }
