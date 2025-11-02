@@ -1,6 +1,8 @@
+import { sevenChurches } from "../enums/sevenChurchesInAsia";
 import WhoCanAcceptRevelation from "../interfaces/whoCanAcceptRevelation";
 import WhoCanGiveRevelation from "../interfaces/whoCanGiveRevelation";
 import Angel from "./angel";
+import ChurchInAsia from "./churchInAsia";
 import JesusCrist from "./JesusCrist";
 import John from "./john";
 import Revelation from "./revelation";
@@ -20,7 +22,7 @@ export default class God implements WhoCanGiveRevelation {
      * 
      * @param somebody WhoCanAcceptRevelation
      */
-    public giveRevelationTo(somebody: WhoCanAcceptRevelation)
+    giveRevelationTo(somebody: WhoCanAcceptRevelation)
     {
         if (this.revelation) {
             somebody.acceptRevelation(this.revelation)
@@ -36,7 +38,7 @@ export default class God implements WhoCanGiveRevelation {
      * 
      * @returns JesusCrist
      */
-    public createJesus(): JesusCrist
+    createJesus(): JesusCrist
     {
         return new JesusCrist
     }
@@ -48,7 +50,7 @@ export default class God implements WhoCanGiveRevelation {
      * 
      * @returns Angel
      */
-    public createAngel(): Angel
+    createAngel(): Angel
     {
         return new Angel
     }
@@ -59,8 +61,42 @@ export default class God implements WhoCanGiveRevelation {
      * However we can be sure It happened before the Revelation
      * @returns John
      */
-    public createJohn(): John
+    createJohn(): John
     {
         return new John
+    }
+
+
+    /**
+     * 
+     * @returns ChurchInAsia[]
+     */
+    createChurchesInAsia(): ChurchInAsia[]
+    {
+        const sevenChurchesInAsia: ChurchInAsia[] = []
+        for (const church in sevenChurches) {
+            sevenChurchesInAsia[church] = new ChurchInAsia(sevenChurches[church] as string)
+        }
+        return sevenChurchesInAsia
+    }
+
+
+    /**
+     * Rev 1:1
+     * The Revelation of Jesus Christ, which God gave unto him
+     */
+    writeRevelation(): void
+    {
+        this.revelation = new Revelation
+    }
+
+
+    /**
+     * God says
+     * @param whatSays string
+     */
+    says(whatSays: string): void
+    {
+
     }
 }

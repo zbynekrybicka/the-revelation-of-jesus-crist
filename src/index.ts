@@ -1,10 +1,19 @@
 import Angel from "./classes/angel"
+import ChurchInAsia from "./classes/churchInAsia"
 import God from "./classes/god"
+import GraceAndPeace from "./classes/graceAndPeace"
 import JesusCrist from "./classes/JesusCrist"
 import John from "./classes/john"
+import Spirit from "./classes/spirit"
 import TestimonyOfJesusCrist from "./classes/testimonyOfJesusCrist"
+import HeWhichIsWhichWasAndWhichIsToCome from "./interfaces/heWhichIsWhichWasAndWhichIsToCome"
 import WhoHearWordOfGod from "./interfaces/whoHearWordOfGod"
+import WhoIsFirstBegottenOfTheDead from "./interfaces/whoIsFirstBegottenOfTheDead"
+import WhoIsPrinceOfTheKingsOfTheEarth from "./interfaces/whoIsPrinceOfTheKingsOfTheEarth"
+import WhoIsTheFaithfulWitness from "./interfaces/whoIsTheFaithfulWitness"
+import WhoMadeUsKingsAndPriests from "./interfaces/whoMadeUsKingsAndPriests"
 import WhoReadWordOfGod from "./interfaces/whoReadWordOfGod"
+import WhoWashedUsFromOurSins from "./interfaces/whoWashedUsFromOurSins"
 
 /**
  * Simple hack. God haven't been created. 
@@ -25,6 +34,14 @@ const nations: WhoHearWordOfGod[] = []
 const languages: WhoHearWordOfGod[] = []
 const kings: WhoHearWordOfGod[] = []
 
+const churchesInAsia: ChurchInAsia[] = god.createChurchesInAsia()
+
+const sevenSpirits: Spirit[] = new Array(7).fill(null).map(() => new Spirit)
+
+const everyEye: ChurchInAsia[] = churchesInAsia
+const earthTribes: ChurchInAsia[] = churchesInAsia
+
+god.writeRevelation()
 /**
  * Summary and conclusion of the entire book of Revelation
  * Revelation 1:1-8
@@ -32,63 +49,94 @@ const kings: WhoHearWordOfGod[] = []
 
 
 // REV 1:1
+    // The Revelation of Jesus Christ, which God gave unto him,
+        god.giveRevelationTo(jesusCrist) // to shew unto his servants things which must shortly come to pass;
 
-  // The Revelation of Jesus Christ, which God gave unto him,
-    god.giveRevelationTo(jesusCrist) // to shew unto his servants things which must shortly come to pass;
+    // and he sent and signified it by his angel
+        jesusCrist.giveRevelationTo(angel)
 
-  // and he sent and signified it by his angel
-    jesusCrist.giveRevelationTo(angel)
-
-  // unto his servant John:
-    angel.giveRevelationTo(john)
+    // unto his servant John:
+        angel.giveRevelationTo(john)
 
 
 // REV 1:2
-
-  // who bare record of the word of God,
-  // and of the testimony of Jesus Christ, and of all things that he saw.
-  const testimony: TestimonyOfJesusCrist = john.testify()
-
+    // who bare record of the word of God,
+    // and of the testimony of Jesus Christ, and of all things that he saw.
+        const testimony: TestimonyOfJesusCrist = john.testify()
 
 // REV 1:3
-  // Blessed is he that readeth,
-  const whoReads: WhoReadWordOfGod = john
-  whoReads.getBlessed()
+    // Blessed is he that readeth,
+        const whoReads: WhoReadWordOfGod = john
+        whoReads.getBlessed()
 
-  // and they that hear the words of this prophecy, 
-  const whoHear: WhoHearWordOfGod[] = [...people, ...nations, ...languages, ...kings]
+    // and they that hear the words of this prophecy, 
+        const whoHear: WhoHearWordOfGod[] = [...people, ...nations, ...languages, ...kings]
 
-  // and keep those things which are written therein: 
-  for (const oneWhoHear of whoHear) {
-    if (oneWhoHear.keepProphecy()) {
-      oneWhoHear.getBlessed()
-    }
-  } // for the time is at hand.
+    // and keep those things which are written therein: 
+        for (const oneWhoHear of whoHear) {
+            if (oneWhoHear.keepProphecy()) {
+                oneWhoHear.getBlessed()
+            }
+        } // for the time is at hand.
 
-  
+
 // REV 1:4
-  // John to the seven churches which are in Asia: 
-  // Grace be unto you, and peace, from him which is, and which was, and which is to come; 
-  // and from the seven Spirits which are before his throne;
+    // John to the seven churches which are in Asia: 
+    // Grace be unto you, and peace,
+        const graceAndPeace: GraceAndPeace = new GraceAndPeace
+
+    // from him which is, and which was, and which is to come; 
+        const heWhichIsWhichWasAndWhichIsToCome: HeWhichIsWhichWasAndWhichIsToCome = god
+        graceAndPeace.from(heWhichIsWhichWasAndWhichIsToCome)
+    
+    // and from the seven Spirits which are before his throne;
+        graceAndPeace.fromAll(sevenSpirits)
 
 // REV 1:5
-  // and from Jesus Christ, who is the faithful witness, 
-  // and the first begotten of the dead, and the prince of the kings of the earth. 
-  // Unto him that loved us, and washed us from our sins in his own blood,
+    // and from Jesus Christ, 
+        graceAndPeace.from(jesusCrist)
+
+    // who is the faithful witness, 
+        const theFaithfulWitness: WhoIsTheFaithfulWitness = jesusCrist
+        graceAndPeace.from(theFaithfulWitness)
+
+    // and the first begotten of the dead,
+        const firstBegottenOfTheDead: WhoIsFirstBegottenOfTheDead = jesusCrist
+        graceAndPeace.from(firstBegottenOfTheDead)
+
+    // and the prince of the kings of the earth. 
+        const princeOfTheKingsOfTheEarth: WhoIsPrinceOfTheKingsOfTheEarth = jesusCrist
+        graceAndPeace.from(princeOfTheKingsOfTheEarth)
+
+    // Unto him that loved us, and washed us from our sins in his own blood,
+        const whoWashedUsFromOurSins: WhoWashedUsFromOurSins = jesusCrist
+        graceAndPeace.from(whoWashedUsFromOurSins)
 
 // REV 1:6
-  // and hath made us kings and priests unto God and his Father;
-  // to him be glory and dominion for ever and ever. Amen.
+    // and hath made us kings and priests unto God and his Father;
+        const whoMadeUsKingsAndPriests: WhoMadeUsKingsAndPriests = jesusCrist
+        graceAndPeace.from(whoMadeUsKingsAndPriests)
+
+    // to him be glory and dominion for ever and ever. Amen.
+        jesusCrist.getGloryAndDominion()
+
+        churchesInAsia.forEach((churchInAsia: ChurchInAsia) => john.sendGraceAndPeace(graceAndPeace, churchInAsia))
 
 // REV 1:7
-  // Behold, he cometh with clouds; 
-  // and every eye shall see him, and they also which pierced him: 
-  // and all kindreds of the earth shall wail because of him. Even so, Amen.
+    // Behold, he cometh with clouds;
+        jesusCrist.comeWithClouds()
+
+    // and every eye shall see him, and they also which pierced him:
+        everyEye.forEach((eye: ChurchInAsia) => eye.seeHim(jesusCrist))
+
+    // and all kindreds of the earth shall wail because of him. Even so, Amen.
+        earthTribes.forEach((earthTribe: ChurchInAsia) => earthTribe.beatFor(jesusCrist))
 
 // REV 1:8
-  // I am Alpha and Omega, the beginning and the ending,
-  // saith the Lord, which is, and which was, and which is to come, the Almighty.
-
+    // I am Alpha and Omega, the beginning and the ending,
+        god.says("I am Alpha and Omega, the begining and the ending.")
+    // saith the Lord, which is, and which was, and which is to come, the Almighty.
+        god === heWhichIsWhichWasAndWhichIsToCome
 
 /**
  * The Election of John

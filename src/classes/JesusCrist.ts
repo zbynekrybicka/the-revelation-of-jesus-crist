@@ -34,4 +34,24 @@ export default class JesusCrist implements WhoCanAcceptRevelation, WhoCanGiveRev
         }
     }
 
+
+    /**
+     * REV 1:6
+     * to him be glory and dominion for ever and ever. Amen.
+     */
+    getGloryAndDominion(): void
+    {
+
+    }
+
+
+    /**
+     * REV 1:7
+     * Behold, he cometh with clouds;
+     */
+    comeWithClouds(): void
+    {
+
+    }
+
 }

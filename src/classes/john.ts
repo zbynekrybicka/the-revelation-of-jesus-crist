@@ -1,5 +1,7 @@
+import WhoCanAcceptGraceAndPeace from "../interfaces/whoCanAcceptGraceAndPeace";
 import WhoCanAcceptRevelation from "../interfaces/whoCanAcceptRevelation";
 import WhoReadWordOfGod from "../interfaces/whoReadWordOfGod";
+import GraceAndPeace from "./graceAndPeace";
 import Revelation from "./revelation";
 
 
@@ -43,5 +45,16 @@ export default class John implements WhoCanAcceptRevelation, WhoReadWordOfGod {
         throw new Error("Method not implemented.");
     }
 
+
+    /**
+     * John to the seven churches which are in Asia: 
+     * Grace be unto you, and peace,
+     * @param graceAndPeace 
+     * @param everybody 
+     */
+    sendGraceAndPeace(graceAndPeace: GraceAndPeace, somebody: WhoCanAcceptGraceAndPeace): void
+    {
+        somebody.acceptGraceAndPeace(graceAndPeace)
+    }
 
 }
