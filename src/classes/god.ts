@@ -6,6 +6,7 @@ import ChurchInAsia from "./churchInAsia";
 import JesusCrist from "./JesusCrist";
 import John from "./john";
 import Revelation from "./revelation";
+import Spirit from "./spirit";
 
 /**
  * Genesis 1:1 In the beginning God created the heaven and the earth.
@@ -78,6 +79,17 @@ export default class God implements WhoCanGiveRevelation {
             sevenChurchesInAsia[church] = new ChurchInAsia(sevenChurches[church] as string)
         }
         return sevenChurchesInAsia
+    }
+
+
+    /**
+     * Rev 1:4
+     * and from the seven Spirits which are before his throne
+     * @returns Spirit[]
+     */
+    createSevenSpirits(): Spirit[]
+    {
+        return new Array(7).fill(null).map(() => new Spirit)
     }
 
 

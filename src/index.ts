@@ -36,7 +36,7 @@ const kings: WhoHearWordOfGod[] = []
 
 const churchesInAsia: ChurchInAsia[] = god.createChurchesInAsia()
 
-const sevenSpirits: Spirit[] = new Array(7).fill(null).map(() => new Spirit)
+const sevenSpirits: Spirit[] = god.createSevenSpirits()
 
 const everyEye: ChurchInAsia[] = churchesInAsia
 const earthTribes: ChurchInAsia[] = churchesInAsia
