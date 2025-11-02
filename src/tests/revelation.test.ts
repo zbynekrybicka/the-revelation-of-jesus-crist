@@ -22,6 +22,7 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
                 god.giveRevelationTo(jesusCrist)
 
                 expect(god).toBeInstanceOf(God)
+                expect(jesusCrist).not.toBeInstanceOf(God) // Jesus Crist is not God! Remember it forever at last
                 expect(jesusCrist).toBeInstanceOf(JesusCrist)
                 expect(god.hasRevelation()).toBeFalsy()
                 expect(jesusCrist.hasRevelation()).toBeTruthy()
