@@ -1,8 +1,20 @@
 import WhoCanAcceptRevelation from "../interfaces/whoCanAcceptRevelation";
 import WhoCanGiveRevelation from "../interfaces/whoCanGiveRevelation";
+import WhoIsFirstBegottenOfTheDead from "../interfaces/whoIsFirstBegottenOfTheDead";
+import WhoIsPrinceOfTheKingsOfTheEarth from "../interfaces/whoIsPrinceOfTheKingsOfTheEarth";
+import WhoIsTheFaithfulWitness from "../interfaces/whoIsTheFaithfulWitness";
+import WhoMadeUsKingsAndPriests from "../interfaces/whoMadeUsKingsAndPriests";
+import WhoWashedUsFromOurSins from "../interfaces/whoWashedUsFromOurSins";
 import Revelation from "./revelation";
 
-export default class JesusCrist implements WhoCanAcceptRevelation, WhoCanGiveRevelation {
+export default class JesusCrist implements 
+    WhoCanAcceptRevelation, 
+    WhoCanGiveRevelation,
+    WhoIsTheFaithfulWitness,
+    WhoIsFirstBegottenOfTheDead,
+    WhoIsPrinceOfTheKingsOfTheEarth,
+    WhoWashedUsFromOurSins,
+    WhoMadeUsKingsAndPriests {
     
     revelation?: Revelation
 

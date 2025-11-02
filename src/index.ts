@@ -16,7 +16,7 @@ import WhoReadWordOfGod from "./interfaces/whoReadWordOfGod"
 import WhoWashedUsFromOurSins from "./interfaces/whoWashedUsFromOurSins"
 
 /**
- * Simple hack. God haven't been created. 
+ * Simple hack. God has't been created. 
  * However he is not implicitly in this application.
  */
 const god: God = new God
@@ -73,11 +73,7 @@ god.writeRevelation()
         const whoHear: WhoHearWordOfGod[] = [...people, ...nations, ...languages, ...kings]
 
     // and keep those things which are written therein: 
-        for (const oneWhoHear of whoHear) {
-            if (oneWhoHear.keepProphecy()) {
-                oneWhoHear.getBlessed()
-            }
-        } // for the time is at hand.
+        whoHear.forEach((oneWhoHear: WhoHearWordOfGod) => oneWhoHear.keepProphecy() && oneWhoHear.getBlessed()) // for the time is at hand.
 
 
 // REV 1:4
