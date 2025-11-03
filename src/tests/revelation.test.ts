@@ -476,11 +476,279 @@ describe("Revelation 2: The letters which were sent to angels of seven churches"
 
     describe("The Message to Pergamos", () =>
     {
+        describe('REV 2:12', () =>
+        {
+            it(`And to the angel of the church in Per´gamos write;`, () => 
+            {
 
+            })
+
+            it(`These things saith he which hath the sharp sword with two edges.`, () => 
+            {
+
+            })
+        })
+        
+        describe('REV 2:13', () =>
+        {
+            it(`I know thy works, and where thou dwellest, even where Satan's seat is:`, () => 
+            {
+
+            })
+
+            it(`and thou holdest fast my name, and hast not denied my faith,`, () => 
+            {
+
+            })
+
+            it(`even in those days wherein An´tipas was my faithful martyr, who was slain among you,`, () => 
+            {
+
+            })
+
+            it(`where Satan dwelleth.`, () => 
+            {
+
+            })
+        })
+        
+        describe('REV 2:14', () =>
+        {
+            it(`But I have a few things against thee, because thou hast there them that hold the doctrine of Balaam, who taught Balak`, () => 
+            {
+
+            })
+
+            it(`to cast a stumbling-block before the children of Israel,`, () => 
+            {
+
+            })
+
+            it(`to eat things sacrificed unto idols, and to commit fornication.`, () => 
+            {
+
+            })
+        })
+        
+        describe('REV 2:15', () =>
+        {
+            it(`So hast thou also them that hold the doctrine of the Nicolaitans, which thing I hate.`, () => 
+            {
+
+            })
+        })
+        
+        describe('REV 2:16', () =>
+        {
+            it(`Repent; or else I will come unto thee quickly, and will fight against them with the sword of my mouth.`, () => 
+            {
+
+            })
+        })
+        
+        describe('REV 2:17', () =>
+        {
+            it(`He that hath an ear, let him hear what the Spirit saith unto the churches;`, () => 
+            {
+
+            })
+
+            it(`To him that overcometh will I give to eat of the hidden manna, and will give him a white stone,`, () => 
+            {
+
+            })
+
+            it(`and in the stone a new name written, which no man knoweth saving he that receiveth it.`, () => 
+            {
+
+            })
+        })
+        
+    })
+
+    describe("The Message to Thyatira", () =>
+    {
+        describe('REV 2:18', () =>
+        {
+            it(`And unto the angel of the church in Thy-atira write;`, () => 
+            {
+
+            })
+
+            it(`These things saith the Son of God,`, () => 
+            {
+
+            })
+
+            it(`who hath his eyes like unto a flame of fire,`, () => 
+            {
+
+            })
+
+            it(`and his feet are like fine brass.`, () => 
+            {
+
+            })
+        })
+
+        describe('REV 2:19', () =>
+        {
+            it(`I know thy works, and charity, and service, and faith, and thy patience,`, () => 
+            {
+
+            })
+
+            it(`and thy works; and the last to be more than the first.`, () => 
+            {
+
+            })
+        })
+
+        describe('REV 2:20', () =>
+        {
+            it(`Notwithstanding I have a few things against thee, because thou sufferest that woman Jezebel,`, () => {})
+            it(`which calleth herself a prophetess, to teach`, () => {})
+            it(`and to seduce my servants to commit fornication, and to eat things sacrificed unto idols.`, () => {})
+        })
+
+        describe('REV 2:21', () =>
+        {
+            it(`And I gave her space to repent of her fornication; and she repented not.`, () => {})
+        })
+
+        describe('REV 2:22', () =>
+        {
+            it(`Behold, I will cast her into a bed,`, () => {})
+            it(`and them that commit adultery with her into great tribulation, except they repent of their deeds.`, () => {})
+        })
+
+        describe('REV 2:23', () =>
+        {
+            it(`And I will kill her children with death;`, () => {})
+            it(`and all the churches shall know that I am he which searcheth the reins and hearts:`, () => {})
+            it(`and I will give unto every one of you according to your works.`, () => {})
+        })
+
+        describe('REV 2:24', () =>
+        {
+            it(`But unto you I say, and unto the rest in Thyatira, as many as have not this doctrine,`, () => {})
+            it(`and which have not known the depths of Satan, as they speak;`, () => {})
+            it(`I will put upon you none other burden.`, () => {})
+        })
+
+        describe('REV 2:25', () =>
+        {
+            it(`But that which ye have already, hold fast till I come.`, () => {})
+        })
+
+        describe('REV 2:26', () =>
+        {
+            it(`And he that overcometh, and keepeth my works unto the end, to him will I give power over the nations:`, () => {})
+        })
+
+        describe('REV 2:27', () =>
+        {
+            it(`and he shall rule them with a rod of iron;`, () => {})
+            it(`as the vessels of a potter shall they be broken to shivers: even as I received of my Father.`, () => {})
+        })
+
+        describe('REV 2:28', () =>
+        {
+            it(`And I will give him the morning star.`, () => {})
+        })
+
+        describe('REV 2:29', () =>
+        {
+            it(`He that hath an ear, let him hear what the Spirit saith unto the churches.`, () => {})
+        })
     })
 })
 
 describe("Revelation 3: The letters which were sent to angels of seven churches", () =>
 {
-    
+    describe("The Message to Sardis", () =>
+    {
+        describe('3:1', () => 
+        {
+            it(`And unto the angel of the church in Sardis write;`, () => 
+            {
+
+            })
+
+            it(`These things saith he that hath the seven Spirits of God, and the seven stars.`, () => 
+            {
+
+            })
+
+            it(`I know thy works, that thou hast a name that thou livest, and art dead.`, () => 
+            {
+
+            })
+        })
+
+        describe('3:2', () => 
+        {
+            it(`Be watchful, and strengthen the things which remain, that are ready to die:`, () => 
+            {
+
+            })
+
+            it(`for I have not found thy works perfect before God.`, () => 
+            {
+
+            })
+        })
+
+        describe('3:3', () => 
+        {
+            it(`Remember therefore how thou hast received and heard, and hold fast, and repent.`, () => 
+            {
+
+            })
+
+            it(`If therefore thou shalt not watch, I will come on thee as a thief,`, () => 
+            {
+
+            })
+
+            it(`and thou shalt not know what hour I will come upon thee.`, () => 
+            {
+
+            })
+        })
+
+        describe('3:4', () => 
+        {
+            it(`Thou hast a few names even in Sardis which have not defiled their garments;`, () => 
+            {
+
+            })
+
+            it(`and they shall walk with me in white: for they are worthy.`, () => 
+            {
+
+            })
+        })
+
+        describe('3:5', () => 
+        {
+            it(`He that overcometh, the same shall be clothed in white raiment; and I will not blot out his name out of the book of life,`, () => 
+            {
+
+            })
+
+            it(`but I will confess his name before my Father, and before his angels.`, () => 
+            {
+
+            })
+        })
+
+        describe('3:6', () => 
+        {
+            it(`He that hath an ear, let him hear what the Spirit saith unto the churches.`, () => 
+            {
+
+            })
+        })
+    })
 })
