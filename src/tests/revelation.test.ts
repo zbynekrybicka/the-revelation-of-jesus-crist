@@ -752,3 +752,172 @@ describe("Revelation 3: The letters which were sent to angels of seven churches"
         })
     })
 })
+
+describe("Revelation 4: God’s Throne and Heavenly Organization", () =>
+{
+    describe("The Heavenly Worship", () =>
+    {
+        describe("4:1", () => 
+        {
+            it(`After this I looked, and, behold, a door was opened in heaven:`, () => 
+            {
+
+            })
+
+            it(`and the first voice which I heard was as it were of a trumpet talking with me;`, () => 
+            {
+
+            })
+
+            it(`which said, Come up hither, and I will show thee things which must be hereafter.`, () => 
+            {
+
+            })
+        })
+
+        describe("4:2", () => 
+        {
+            it(`And immediately I was in the Spirit:`, () => 
+            {
+
+            })
+
+            it(`and, behold, a throne was set in heaven, and one sat on the throne.`, () => 
+            {
+
+            })
+        })
+
+        describe("4:3", () => 
+        {
+            it(`And he that sat was to look upon like a jasper and a sardine stone:`, () => 
+            {
+
+            })
+
+            it(`and there was a rainbow round about the throne, in sight like unto an emerald.`, () => 
+            {
+
+            })
+        })
+
+        describe("4:4", () => 
+        {
+            it(`And round about the throne were four and twenty seats: and upon the seats I saw four and twenty elders sitting,`, () => 
+            {
+
+            })
+
+            it(`clothed in white raiment; and they had on their heads crowns of gold.`, () => 
+            {
+
+            })
+        })
+
+        describe("4:5", () => 
+        {
+            it(`And out of the throne proceeded lightnings and thunderings and voices:`, () => 
+            {
+
+            })
+
+            it(`and there were seven lamps of fire burning before the throne, which are the seven Spirits of God.`, () => 
+            {
+
+            })
+        })
+
+        describe("4:6", () => 
+        {
+            it(`And before the throne there was a sea of glass like unto crystal.`, () => 
+            {
+
+            })
+
+            it(`And in the midst of the throne, and round about the throne,`, () => 
+            {
+
+            })
+
+            it(`were four beasts full of eyes before and behind.`, () => 
+            {
+
+            })
+        })
+
+        describe("4:7", () => 
+        {
+            it(`And the first beast was like a lion,`, () => 
+            {
+
+            })
+
+            it(`and the second beast like a calf,`, () => 
+            {
+
+            })
+
+            it(`and the third beast had a face as a man,`, () => 
+            {
+
+            })
+
+            it(`and the fourth beast was like a flying eagle.`, () => 
+            {
+
+            })
+        })
+
+        describe("4:8", () => 
+        {
+            it(`And the four beasts had each of them six wings about him; and they were full of eyes within:`, () => 
+            {
+
+            })
+
+            it(`and they rest not day and night, saying, Holy, holy, holy, Lord God Almighty, which was, and is, and is to come.`, () => 
+            {
+
+            })
+        })
+
+        describe("4:9", () => 
+        {
+            it(`And when those beasts give glory and honor and thanks`, () => 
+            {
+
+            })
+
+            it(`to him that sat on the throne, who liveth for ever and ever,`, () => 
+            {
+
+            })
+        })
+
+        describe("4:10", () => 
+        {
+            it(`the four and twenty elders fall down before him that sat on the throne, and worship him that liveth for ever and ever,`, () => 
+            {
+
+            })
+
+            it(`and cast their crowns before the throne, saying,`, () => 
+            {
+
+            })
+        })
+
+        describe("4:11", () => 
+        {
+            it(`Thou art worthy, O Lord, to receive glory and honor and power:`, () => 
+            {
+
+            })
+
+            it(`for thou hast created all things, and for thy pleasure they are and were created.`, () => 
+            {
+
+            })
+        })
+    })
+})
