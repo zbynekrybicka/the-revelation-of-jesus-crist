@@ -7,18 +7,21 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
             it(`The Revelation of Jesus Christ, which God gave unto him, 
             to show unto his servants things which must shortly come to pass;`, () => 
             {
-                god.writeRevelation()
-                god.giveRevelationTo(jesusChrist)
+                revelation
+                jesusChrist
+                god
+                servants
+                thingsWhichComeToPass
             })
 
             it(`and he sent and signified it by his angel`, () => 
             {
-                jesusChrist.giveRevelationTo(angel[whoHaveRevelation])
+                angelWhoGiveRevelation
             })
             
             it(`unto his servant John:`, () => 
             {
-                angel[whoHaveRevelation].giveRevelationTo(john)
+                john
             })
         })
 
@@ -27,7 +30,8 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
             it(`who bare record of the word of God, and of the testimony of Jesus Christ,
             and of all things that he saw.`, () => 
             {
-                john.write(testimonyOfJesusChrist, thingsThatHeSaw)
+                testimonyOfJesusChrist
+                thingsWhichHeSaw
             })
         })
 
@@ -36,15 +40,15 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
         {
             it(`Blessed is he that readeth,`, () => 
             {
-                whoReadsWordOfGod.getBlessed()
+                whoReadsWordOfGod
             })
 
             it(`and they that hear the words of this prophecy, 
             and keep those things which are written therein:
             for the time is at hand.`, () => 
             {
-                whoHearWordOfGod.keepProphecy()
-                whoHearWordOfGod.getBlessed()
+                whoHearWordOfGod
+                whoKeepWordOfGod
             })
         })
     })
@@ -57,13 +61,16 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
             it(`John to the seven churches which are in Asia:
             Grace be unto you, and peace, from him which is, and which was, and which is to come;`, () =>
             {
-                const grace = john.sendGraceTo(sevenChurches)
-                grace.from([heWhichIsAndWhichWasAndWhichIsToCome])
+                john
+                sevenChurches
+                grace
+                peace
+                heWhichIsAndWhichWasAndWhichIsToCome
             })
             
             it('and from the seven Spirits which are before his throne;', () => 
             {
-                grace.from(sevenSpiritsBeforeThrone)
+                sevenSpiritsBeforeThrone
             })
         })
 
@@ -71,24 +78,25 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
         {
             it(`and from Jesus Christ, who is the faithful witness,`, () =>
             {
-                grace.from(jesusChrist)
-                expect(jesusChrist).toBe(faithfulWitness)
+                jesusChrist
+                faithfulWitness
             })
 
             it(`and the first-begotten of the dead,`, () =>
             {
-                expect(jesusChrist).toBe(firstBornFromTheDead)
+                firstBornFromTheDead
             })
 
             it(`and the prince of the kings of the earth.`, () =>
             {
-                expect(jesusChrist).toBe(thePrinceOfTheKingsOfTheEarth)
+                thePrinceOfTheKingsOfTheEarth
             })
 
             it(`Unto him that loved us, and washed us from our sins in his own blood,`, () => 
             {
-                expect(jesusChrist).toBe(whoLoveUs)
-                jesusChrist.washFromSins(we)
+                whoLoveUs
+                ourSins
+                jesusOwnBlood
             })
         })
 
@@ -96,12 +104,13 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
         {
             it(`and hath made us kings and priests unto God and his Father;`, () =>
             {
-                jesusChrist.makeKingsAndPriests(we)
+                kingsAndPriests
+                god
             })
 
             it(`to him be glory and dominion for ever and ever. Amen.`, () =>
             {
-                jesusChrist.gloryAndDominitionToHim()
+                gloryAndDominition
             })
         })
 
@@ -109,24 +118,24 @@ describe("Revelation 1:1-8: Summary and conclusion of the entire book of Revelat
         {
             it(`Behold, he cometh with clouds; and every eye shall see him, and they also which pierced him:`, () =>
             {
-                jesusChrist.comeWithClouds()
-                we.see(jesusChrist)
-                sevenChurches.see(jesusChrist)
+                clouds
+                everyEye
+                whoPiercedHim
             })
 
             it(`and all kindreds of the earth shall wail because of him. Even so, Amen.`, () => 
             {
-                earthTribes.promote(jesusChrist)
+                earthTribes
             })
         })
 
         describe('REV 1:8', () =>
         {
-            it(`I am Alpha and Ome´ga, the beginning and the ending, saith the Lord, which is, and which was, and which is to come, the Almighty.`, () =>
+            it(`I am Alpha and Omega, the beginning and the ending, saith the Lord, which is, and which was, and which is to come, the Almighty.`, () =>
             {
-                expect(god).toBe(alphaAndOmega)
-                expect(god).toBe(beginAndEnd)
-                expect(god).toBe(heWhichIsAndWhichWasAndWhichIsToCome)
+                alphaAndOmega
+                beginAndEnd
+                heWhichIsAndWhichWasAndWhichIsToCome
             })
         })
     })
@@ -143,20 +152,20 @@ describe("Revelation 1:9-20: The Election of New John", () =>
             was in the isle that is called Patmos, 
             for the word of God, and for the testimony of Jesus Christ.`, () =>
             {
-                john.exilTo(patmos)
+                john
+                yourBrother
+                tribulation
+                kingdom
+                jesusChrist
+                patmosIsland
             })
         })
 
         describe('REV 1:10', () =>
         {
-            it(`I was in the Spirit on the Lord's day,`, () =>
+            it(`I was in the Spirit on the Lord's day, and heard behind me a great voice, as of a trumpet,`, () =>
             {
-                const johnSpirit = god.bringToSpirit(john)
-            })
-            
-            it(`and heard behind me a great voice, as of a trumpet,`, () =>
-            {
-                johnSpirit.hear(greatVoiceAsOfTrumpet)
+                greatVoiceAsTrumpet
             })
         })
 
@@ -164,12 +173,13 @@ describe("Revelation 1:9-20: The Election of New John", () =>
         {
             it(`saying, I am Alpha and Omega, the first and the last:`, () =>
             {
-                expect(god).toBe(alphaAndOmega)
+                alphaAndOmega
+                theFirstAndTheLast
             })
             
             it(`and, What thou seest, write in a book,`, () =>
             {
-                johnSpirit.hear(commandToWrite)
+                
             })
             
             it (`and send it unto the seven churches which are in Asia; 
@@ -177,7 +187,14 @@ describe("Revelation 1:9-20: The Election of New John", () =>
             and unto Thyatira, and unto Sardis,
             and unto Philadelphia, and unto Laodicea.`, () =>
             {
-                johnSpirit.hear(commandToSend)
+                churchesInAsia
+                Ephesus
+                Smyrna
+                Pergamos
+                Thyatira
+                Sardis
+                Philadelphia
+                Laodicea
             })
         })
 
@@ -186,7 +203,7 @@ describe("Revelation 1:9-20: The Election of New John", () =>
             it(`And I turned to see the voice that spake with me.
             And being turned, I saw seven golden candlesticks;`, () =>
             {
-                johnSpirit.see(candleStick)
+                sevenGoldenCandlesticks
             })
         })
 
@@ -194,13 +211,12 @@ describe("Revelation 1:9-20: The Election of New John", () =>
         {
             it(`and in the midst of the seven candlesticks one like unto the Son of man,`, () =>
             {
-                johnSpirit.see(sonOfMan)
+                sonOfMan
             })
 
             it(`clothed with a garment down to the foot, and girt about the paps with a golden girdle.`, () =>
             {
-                johnSpirit.see(whiteGarment)
-                expect(sonOfMan.hasSpiritEntity(whiteGarment)).toBeTruthy()
+                whiteGarment
             })
         })
 
@@ -208,10 +224,8 @@ describe("Revelation 1:9-20: The Election of New John", () =>
         {
             it(`His head and his hairs were white like wool, as white as snow; and his eyes were as a flame of fire;`, () =>
             {
-                johnSpirit.see(hairsLikeWool)
-                johnSpirit.see(fireEyes)
-                expect(sonOfMan.hasSpiritEntity(hairsLikeWool)).toBeTruthy()
-                expect(sonOfMan.hasSpiritEntity(fireEyes)).toBeTruthy()
+                hairsLikeWool
+                fireEyes
             })
         })
 
@@ -220,13 +234,8 @@ describe("Revelation 1:9-20: The Election of New John", () =>
             it(`and his feet like unto fine brass, as if they burned in a furnace; 
             and his voice as the sound of many waters.`, () =>
             {
-                johnSpirit.see(feetLikeBurnedBronze)
-                expect(sonOfMan.hasSpiritEntity(feetLikeBurnedBronze)).toBeTruthy()
-                expect(feetLikeBurnedBronze).toBeInstanceOf(WordOfGod)
-
-                johnSpirit.hear(voiceAsTheSoundOfManyWaters)
-                expect(sonOfMan.hasSpiritEntity(voiceAsTheSoundOfManyWaters)).toBeTruthy()
-                expect(voiceAsTheSoundOfManyWaters).toBeInstanceOf(WordOfGod)
+                feetLikeBurnedBronze
+                voiceAsTheSoundOfManyWaters
             })
         })
 
@@ -234,23 +243,17 @@ describe("Revelation 1:9-20: The Election of New John", () =>
         {
             it(`And he had in his right hand seven stars:`, () =>
             {
-                johnSpirit.see(sevenStars)
-                expect(sonOfMan.hasSpiritEntity(sevenStars)).toBeTruthy()
+                sevenStars
             })
 
             it(`and out of his mouth went a sharp two-edged sword:`, () =>
             {
-                johnSpirit.see(sharpTwoEdgedSword)
-                expect(sonOfMan.hasSpiritEntity(sharpTwoEdgedSword)).toBeTruthy()
-                expect(sharpTwoEdgedSword).toBeInstanceOf(WordOfGod)
-                expect(sharpTwoEdgedSword).toBeInstanceOf(WordOfTheCourt)
+                sharpTwoEdgedSword
             })
 
             it(`and his countenance was as the sun shineth in his strength.`, () =>
             {
-                johnSpirit.see(countenanceLikeSunInHisStrength)
-                expect(sonOfMan.hasSpiritEntity(countenanceLikeSunInHisStrength)).toBeTruthy()
-                expect(countenanceLikeSunInHisStrength).toBeInstanceOf(WordOfGod)
+                countenanceLikeSunInHisStrength
             })
         })
 
@@ -260,8 +263,7 @@ describe("Revelation 1:9-20: The Election of New John", () =>
             And he laid his right hand upon me, saying unto me, 
             Fear not; I am the first and the last:`, () => 
             {
-                johnSpirit.see(theFirstAndTheLast)
-                expect(theFirstAndTheLast).toBeInstanceOf(JesusChrist)
+                theFirstAndTheLast
             })
         })
 
@@ -270,16 +272,12 @@ describe("Revelation 1:9-20: The Election of New John", () =>
             it(`I am he that liveth, and was dead; 
             and, behold, I am alive for evermore, Amen;`, () =>
             {
-                johnSpirit.see(theLivingOne)
-                expect(theLivingOne).toBeInstanceOf(JesusChrist)
-                expect(theLivingOne.hasEternalLife()).toBeTruthy()
+                theLivingOne
             })
 
             it(`and have the keys of hell and of death.`, () =>
             {
-                johnSpirit.see(keysOfHell)
-                expect(theLivingOne.hasSpiritEntity(keysOfHell)).toBeTruthy()
-                expect(keysOfHell).toBeInstanceOf(WordOfGod)
+                keysOfHellAndDeath
             })
         })
 
@@ -289,9 +287,9 @@ describe("Revelation 1:9-20: The Election of New John", () =>
             and the things which are, 
             and the things which shall be hereafter;`, () => 
             {
-                johnSpirit.hear(commandToWriteWhatHasHeSeen)
-                johnSpirit.hear(commandToWriteThingsWhichAre)
-                johnSpirit.hear(commandToWriteThingsWhichShallBe)
+                thingsWhichHeSaw
+                ThingsWhichAre
+                ThingsWhichShallBe
             })
         })
 
@@ -301,8 +299,10 @@ describe("Revelation 1:9-20: The Election of New John", () =>
             and the seven golden candlesticks. The seven stars are the angels of the seven churches: 
             and the seven candlesticks which thou sawest are the seven churches.`, () =>
             {
-                expect(sevenStars).toBe(angelsOfTheSevenChurches)
-                expect(candlesticks).toBe(sevenChurches)
+                sevenStars
+                angelsOfTheSevenChurches
+                sevenGoldenCandlesticks
+                sevenChurches
             })
         })
     })
@@ -316,17 +316,17 @@ describe("Revelation 2: The letters which were sent to angels of seven churches"
         {
             it(`Unto the angel of the church of Ephesus write;`, () =>
             {
-                john.sendLetter(churchOfEphesus)
+                angelOfChurchEphesus
             })
 
             it(`These things saith he that holdeth the seven stars in his right hand,`, () =>
             {
-                expect(whoHoldsTheSevenStars).toBe(jesusChrist)
+                sevenStars
             })
 
             it(`who walketh in the midst of the seven golden candlesticks.`, () =>
             {
-                expect(whoWalksInTheCandlesticks).toBe(jesusChrist)
+                sevenGoldenCandlesticks
             })
         })
 
@@ -334,30 +334,25 @@ describe("Revelation 2: The letters which were sent to angels of seven churches"
         {
             it(`I know thy works, and thy labor, and thy patience,`, () =>
             {
-                churchOfEphesus.acts([workLaborAndPatience])
+                laborAndPatience
             })
 
             it(`and how thou canst not bear them which are evil:`, () =>
             {
-                churchOfEphesus.acts([cannotStandBadPeople])
+                evilPeople
             })
 
             it(`and thou hast tried them which say they are apostles, and are not, and hast found them liars:`, () =>
             {
-                churchOfEphesus.acts([triedWhichSayTheApostles])
+                theyWchichSayAreAposles
             })
         })
 
         describe('REV 2:3', () =>
         {
-            it(`and hast borne, and hast patience, and for my name's sake hast labored`, () =>
+            it(`and hast borne, and hast patience, and for my name's sake hast labored and hast not fainted.`, () =>
             {
-                churchOfEphesus.acts([endureHardshipsForGodName])
-            })
-
-            it(`and hast not fainted.`, () =>
-            {
-                churchOfEphesus.acts([notFainted])
+                perseveranceForGodName
             })
         })
 
@@ -365,25 +360,21 @@ describe("Revelation 2: The letters which were sent to angels of seven churches"
         {
             it(`Nevertheless I have somewhat against thee, because thou hast left thy first love.`, () =>
             {
-                churchOfEphesus.acts([leavedTheFirstLove])
+                theFirstLove
             })
         })
 
         describe('REV 2:5', () =>
         {
-            it(`Remember therefore from whence thou art fallen,`, () => 
+            it(`Remember therefore from whence thou art fallen, and repent, and do the first works;`, () => 
             {
-
-            })
-
-            it(`and repent, and do the first works;`, () => 
-            {
-
+                repent
             })
 
             it(`or else I will come unto thee quickly, and will remove thy candlestick out of his place, except thou repent.`, () => 
             {
-
+                midGoldenCandlestick
+                repent
             })
         })
 
@@ -391,7 +382,8 @@ describe("Revelation 2: The letters which were sent to angels of seven churches"
         {
             it('But this thou hast, that thou hatest the deeds of the Nicolaitans, which I also hate.', () =>
             {
-
+                nicolaitans
+                nicolaitansActs
             })
         })
 
@@ -399,12 +391,16 @@ describe("Revelation 2: The letters which were sent to angels of seven churches"
         {
             it(`He that hath an ear, let him hear what the Spirit saith unto the churches;`, () => 
             {
-
+                whoHaveEars
+                spirit
+                churches
             })
 
             it(`To him that overcometh will I give to eat of the tree of life, which is in the midst of the paradise of God.`, () => 
             {
-
+                whoOvercome
+                treeOfLife
+                paradiseOfGod
             })
         })
     })
@@ -415,12 +411,13 @@ describe("Revelation 2: The letters which were sent to angels of seven churches"
         {
             it(`And unto the angel of the church in Smyrna write;`, () =>
             {
-
+                angelOfChurchSmyrna
             })
 
             it(`These things saith the first and the last, which was dead, and is alive.`, () =>
             {
-
+                theFirstAndTheLast
+                theLivingOne
             })
         })
 
@@ -428,17 +425,18 @@ describe("Revelation 2: The letters which were sent to angels of seven churches"
         {
             it(`I know thy works, and tribulation, and poverty, (but thou art rich)`, () =>
             {
-
+                tributation
+                povertyButYouAreRich
             })
 
             it(`and I know the blasphemy of them which say they are Jews, and are not,`, () =>
             {
-
+                theyWhichSayAreJews
             })
 
             it(`but are the synagogue of Satan.`, () =>
             {
-
+                synagogueOfSatan
             })
         })
 
@@ -456,7 +454,7 @@ describe("Revelation 2: The letters which were sent to angels of seven churches"
 
             it(`be thou faithful unto death, and I will give thee a crown of life.`, () =>
             {
-
+                crownOfLife
             })            
         })
 
@@ -919,5 +917,13 @@ describe("Revelation 4: God’s Throne and Heavenly Organization", () =>
 
             })
         })
+    })
+})
+
+describe("Revelation 5: A book sealed with seven seals", () =>
+{
+    describe("The Unopened Book and the Lamb", () =>
+    {
+
     })
 })
